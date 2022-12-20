@@ -1,5 +1,11 @@
-import { ReactNode } from 'react';
+import { ChangeEvent } from 'react';
 
-type TextInputProps = { children: ReactNode };
+type TextInputProps = {
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  minLength?: number;
+  placeholder: string;
+  type?: HTMLInputElement['type'];
+  value?: string;
+};
 
 export default TextInputProps;

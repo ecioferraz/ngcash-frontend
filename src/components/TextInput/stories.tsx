@@ -1,12 +1,10 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import TextInputProps from './TextInputProps';
 import TextInput from '.';
+import TextInputProps from './TextInputProps';
 
 export default {
-  args: { children: 'TextInput' },
-  argTypes: { children: { type: 'string' } },
   component: TextInput,
-  title: 'TextInput',
+  title: 'Components/TextInput',
 } as Meta;
 
 export const Template: Story<TextInputProps> = (args) => (

@@ -1,6 +1,20 @@
-import TextInputProps from './TextInputProps';
 import * as Styled from './styles';
+import TextInputProps from './TextInputProps';
 
-export default function TextInput({ children }: TextInputProps) {
-  return <Styled.Container>{children}</Styled.Container>;
+export default function TextInput({
+  handleChange,
+  minLength,
+  placeholder,
+  type = 'text',
+  value,
+}: TextInputProps) {
+  return (
+    <Styled.Container
+      minLength={minLength}
+      onChange={handleChange}
+      placeholder={placeholder}
+      type={type}
+      value={value}
+    />
+  );
 }
