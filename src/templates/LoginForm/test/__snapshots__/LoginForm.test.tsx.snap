@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> should render <LoginForm /> 1`] = `
+.c1 {
+  background: #dc143c;
+}
+
+.c0 {
+  font-size: 6.4rem;
+  text-transform: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<div>
+  <form
+    class=""
+  >
+    <h1
+      class="c0"
+    >
+      Bem-vindo(a)!
+    </h1>
+    <input
+      class=""
+      placeholder="Username"
+      type="text"
+      value=""
+    />
+    <input
+      class=""
+      placeholder="Password"
+      type="text"
+      value=""
+    />
+    <button
+      class="c1"
+      type="button"
+    >
+      Login
+    </button>
+    <button
+      class="c1"
+      type="button"
+    >
+      Register
+    </button>
+  </form>
+</div>
+`;
