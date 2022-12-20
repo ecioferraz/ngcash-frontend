@@ -1,12 +1,12 @@
+import { screen } from '@storybook/testing-library';
 import renderTheme from '../../../styles/renderTheme';
 import Heading from '..';
-import { screen } from '@testing-library/react';
 
 describe('<Heading />', () => {
-  it('should render <Heading />', () => {
-    renderTheme(<Heading>Children</Heading>);
+  it('should render with default values', () => {
+    renderTheme(<Heading>text</Heading>);
 
-    const heading = screen.getByRole('heading', { name: 'Children' });
+    const heading = screen.getByRole('heading', { name: 'text' });
 
     expect(heading).toBeInTheDocument();
   });
