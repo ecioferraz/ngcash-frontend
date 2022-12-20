@@ -1,5 +1,10 @@
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
-type ButtonProps = { children: ReactNode };
+type ButtonProps = {
+  children: ReactNode;
+  disabled?: boolean;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
+  type?: 'button' | 'submit';
+};
 
 export default ButtonProps;

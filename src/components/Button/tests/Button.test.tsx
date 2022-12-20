@@ -4,9 +4,9 @@ import { screen } from '@testing-library/react';
 
 describe('<Button />', () => {
   it('should render <Button />', () => {
-    renderTheme(<Button>Children</Button>);
+    renderTheme(<Button>Button</Button>);
 
-    const button = screen.getByRole('button', { name: 'Children' });
+    const button = screen.getByRole('button', { name: 'Button' });
 
     expect(button).toBeInTheDocument();
   });

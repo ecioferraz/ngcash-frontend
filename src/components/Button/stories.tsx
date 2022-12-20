@@ -5,7 +5,7 @@ import ButtonProps from './ButtonProps';
 export default {
   args: { children: 'Button' },
   argTypes: { children: { type: 'string' } },
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
 } as Meta;
 
