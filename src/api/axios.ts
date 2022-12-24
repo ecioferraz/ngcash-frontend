@@ -10,7 +10,7 @@ type AxiosProps = {
   token?: string;
 };
 
-export default async function makeRequest({
+export default async function requestApi({
   endpoint,
   method,
   body,

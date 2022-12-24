@@ -1,10 +1,11 @@
 import { isAxiosError } from 'axios';
-import { FormEvent, useState } from 'react';
-import makeRequest from '../../api/axios';
+import Router from 'next/router';
+import { FormEvent, useEffect, useState } from 'react';
+import requestApi from '../../api/axios';
 import Button from '../../components/Button';
 import Heading from '../../components/Heading';
 import TextInput from '../../components/TextInput';
-import { saveUser } from '../../services/localStorage';
+import { readUser, saveUser } from '../../services/localStorage';
 import * as Styled from './styles';
 
 export default function LoginForm() {
@@ -19,13 +20,14 @@ export default function LoginForm() {
     try {
       setIsLoading(true);
       setError('');
-      const { data } = await makeRequest({
+      const { data } = await requestApi({
         endpoint: submitMethod,
         method: submitMethod === 'login' ? 'get' : 'post',
         body: login,
       });
 
       saveUser(data);
+      setLogin({ username: '', password: '' });
     } catch (err) {
       if (isAxiosError(err)) setError(err.response?.data.message);
     } finally {
@@ -33,6 +35,10 @@ export default function LoginForm() {
       setSubmitMethod('');
     }
   };
+
+  useEffect(() => {
+    readUser() && Router.push('/account');
+  }, []);
 
   return (
     <Styled.Container onSubmit={handleSubmit}>

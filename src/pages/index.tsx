@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import Router from 'next/router';
+import { useEffect } from 'react';
 
 export default function Home() {
-  const Heading = styled.h1`
-    background: ${({ theme }) => theme.colors.secondaryColor};
-  `;
-
-  return <Heading>Hello, world</Heading>;
+  useEffect(() => {
+    Router.push('/login');
+  }, []);
+  return <></>;
 }
