@@ -3,7 +3,7 @@ import Router from 'next/router';
 import { FormEvent, useEffect, useState } from 'react';
 import requestApi from '../../api/axios';
 import Button from '../../components/Button';
-import Heading from '../../components/Heading';
+import Heading from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
 import { readUser, saveUser } from '../../services/localStorage';
 import * as Styled from './styles';
