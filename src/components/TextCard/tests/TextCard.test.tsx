@@ -1,23 +1,23 @@
 import { screen } from '@storybook/testing-library';
 import renderTheme from '../../../styles/renderTheme';
-import Heading from '..';
+import TextCard from '..';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../../styles/theme';
 
-describe('<Heading />', () => {
+describe('<TextCard />', () => {
   it('should render with default values', () => {
-    renderTheme(<Heading>text</Heading>);
+    renderTheme(<TextCard>text</TextCard>);
 
-    const heading = screen.getByRole('heading', { name: 'text' });
+    const textCard = screen.getByRole('heading', { name: 'text' });
 
-    expect(heading).toHaveStyle({
+    expect(textCard).toHaveStyle({
       'font-size': theme.font.sizes.xhuge,
       'text-transform': 'none',
     });
   });
 
   it('should render the correct heading sizes', () => {
-    const { rerender } = renderTheme(<Heading size="small">text</Heading>);
+    const { rerender } = renderTheme(<TextCard size="small">text</TextCard>);
 
     expect(screen.getByRole('heading', { name: 'text' })).toHaveStyle({
       'font-size': theme.font.sizes.medium,
@@ -25,7 +25,7 @@ describe('<Heading />', () => {
 
     rerender(
       <ThemeProvider theme={theme}>
-        <Heading size="medium">text</Heading>
+        <TextCard size="medium">text</TextCard>
       </ThemeProvider>,
     );
 
@@ -35,7 +35,7 @@ describe('<Heading />', () => {
 
     rerender(
       <ThemeProvider theme={theme}>
-        <Heading size="big">text</Heading>
+        <TextCard size="big">text</TextCard>
       </ThemeProvider>,
     );
 
@@ -45,7 +45,7 @@ describe('<Heading />', () => {
 
     rerender(
       <ThemeProvider theme={theme}>
-        <Heading size="huge">text</Heading>
+        <TextCard size="huge">text</TextCard>
       </ThemeProvider>,
     );
 
@@ -55,7 +55,7 @@ describe('<Heading />', () => {
   });
 
   it('should render with uppercase characters', () => {
-    renderTheme(<Heading uppercase>text</Heading>);
+    renderTheme(<TextCard uppercase>text</TextCard>);
 
     const heading = screen.getByRole('heading', { name: 'text' });
 

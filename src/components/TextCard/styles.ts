@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components';
-import HeadingProps from './HeadingProps';
+import TextCardProps from './TextCardProps';
 
 const textSize = {
   small: (theme: DefaultTheme) => css`
@@ -27,7 +27,7 @@ const mediaFont = (theme: DefaultTheme) => css`
   }
 `;
 
-export const Container = styled.h1<Pick<HeadingProps, 'size' | 'uppercase'>>`
+export const Container = styled.h1<Pick<TextCardProps, 'size' | 'uppercase'>>`
   ${({ size = 'huge', theme, uppercase = false }) => css`
     ${textSize[size](theme)};
     ${textCase(uppercase)};
