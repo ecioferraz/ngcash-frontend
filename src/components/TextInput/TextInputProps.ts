@@ -1,10 +1,10 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, HTMLInputTypeAttribute } from 'react';
 
 type TextInputProps = {
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
   minLength?: number;
   placeholder: string;
-  type?: HTMLInputElement['type'];
+  type?: HTMLInputTypeAttribute;
   value?: string;
 };
 
