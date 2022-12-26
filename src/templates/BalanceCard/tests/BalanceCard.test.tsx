@@ -2,24 +2,13 @@ import renderTheme from '../../../styles/renderTheme';
 import BalanceCard from '..';
 
 describe('<BalanceCard />', () => {
-  it('should render <BalanceCard />', () => {
-    const { container } = renderTheme(<BalanceCard balance="100.00" />);
+  it('should render <BalanceCard />', async () => {
+    const { container } = renderTheme(<BalanceCard />);
 
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-size: 3.2rem;
+        font-size: 1.6rem;
         text-transform: none;
-      }
-
-      .c1 {
-        font-size: 6.4rem;
-        text-transform: none;
-      }
-
-      @media (max-width:768px) {
-        .c1 {
-          font-size: 4.0rem;
-        }
       }
 
       <div>
@@ -32,10 +21,9 @@ describe('<BalanceCard />', () => {
             Saldo
           </h6>
           <p
-            class="c1"
+            class="c0"
           >
             R$ 
-            100,00
           </p>
         </section>
       </div>
