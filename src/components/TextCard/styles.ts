@@ -2,19 +2,29 @@ import styled, { css, DefaultTheme } from 'styled-components';
 import TextCardProps from './TextCardProps';
 
 const textSize = {
+  xsmall: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.xsmall};
+  `,
   small: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.small};
   `,
   medium: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.medium};
+  `,
+  large: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.large};
   `,
-  big: (theme: DefaultTheme) => css`
+  xlarge: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
   `,
   huge: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xhuge};
+    font-size: ${theme.font.sizes.huge};
     ${mediaFont(theme)};
   `,
+  xhuge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.xhuge};
+    ${mediaFont(theme)};
+`,
 };
 
 const textCase = (uppercase: boolean) => css`
