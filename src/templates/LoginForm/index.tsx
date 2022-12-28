@@ -58,7 +58,9 @@ export default function LoginForm() {
         placeholder="Password"
         value={password}
       />
-      <TextCard as="h6">{error}</TextCard>
+      <TextCard as="p" size="xsmall">
+        {error}
+      </TextCard>
       <Button
         disabled={!password || !username}
         handleClick={() =>
