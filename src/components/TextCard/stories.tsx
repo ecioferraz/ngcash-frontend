@@ -1,12 +1,12 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import Heading from '.';
+import TextCard from '.';
 import TextCardProps from './TextCardProps';
 
 export default {
-  args: { children: 'Heading' },
+  args: { children: 'TextCard' },
   argTypes: { children: { type: 'string' } },
-  title: 'Components/Heading',
-  component: Heading,
+  title: 'Components/TextCard',
+  component: TextCard,
 } as Meta;
 
-export const Template: Story<TextCardProps> = (args) => <Heading {...args} />;
+export const Template: Story<TextCardProps> = (args) => <TextCard {...args} />;
