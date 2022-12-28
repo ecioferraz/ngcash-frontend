@@ -1,9 +1,11 @@
 import Router from 'next/router';
 import { useEffect } from 'react';
+import { readUser } from '../services/localStorage';
 
 export default function Home() {
   useEffect(() => {
-    Router.push('/login');
+    readUser() ? Router.push('/account') : Router.push('/login');
   }, []);
+
   return <></>;
 }
