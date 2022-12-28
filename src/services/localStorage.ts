@@ -2,7 +2,7 @@ import UserInfo from '../types/UserInfo';
 
 const USER_KEY = 'ngcash_user';
 
-export const readUser = () =>
+export const readUser = (): UserInfo =>
   JSON.parse(localStorage.getItem(USER_KEY) as string);
 
 export const removeUser = () => localStorage.removeItem(USER_KEY);
