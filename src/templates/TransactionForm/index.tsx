@@ -2,6 +2,7 @@ import { isAxiosError } from 'axios';
 import { FormEvent, useState } from 'react';
 import requestApi from '../../api/axios';
 import Button from '../../components/Button';
+import TextCard from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
 import { readUser } from '../../services/localStorage';
 import * as Styled from './styles';
@@ -10,21 +11,19 @@ export default function TransactionForm() {
   const [transactionData, setTransactionData] = useState({
     loading: false,
     creditedUsername: '',
-    debitedUsername: '',
+    debitedUsername: readUser().username,
     value: '',
   });
-  const [error, setError] = useState('');
+  const [responseMessage, setResponseMessage] = useState('');
+
+  const { token } = readUser();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const { token, username: debitedUsername } = readUser();
-      setTransactionData((prev) => ({
-        ...prev,
-        debitedUsername,
-        loading: true,
-      }));
+      setTransactionData((prev) => ({ ...prev, loading: true }));
+      setResponseMessage('');
 
       await requestApi({
         endpoint: 'transactions',
@@ -32,8 +31,12 @@ export default function TransactionForm() {
         body: transactionData,
         token,
       });
+
+      setResponseMessage('Transação concluída!');
     } catch (err) {
-      if (isAxiosError(err)) setError(err.response?.data.message);
+      if (isAxiosError(err)) setResponseMessage(err.response?.data.message);
+    } finally {
+      setTransactionData((prev) => ({ ...prev, loading: false }));
     }
   };
 
@@ -51,6 +54,11 @@ export default function TransactionForm() {
         }}
         placeholder="Valor (R$)"
       />
+      {responseMessage && (
+        <TextCard as="p" size="xsmall">
+          {responseMessage}
+        </TextCard>
+      )}
       <Button type="submit">Realizar transferência</Button>
     </Styled.Container>
   );
