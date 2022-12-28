@@ -7,7 +7,7 @@ describe('<LoginForm />', () => {
 
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-size: 6.4rem;
+        font-size: 5.6rem;
         text-transform: none;
       }
 
