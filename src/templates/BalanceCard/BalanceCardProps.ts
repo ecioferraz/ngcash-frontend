@@ -1,3 +1,6 @@
-type BalanceCardProps = { balance: string };
+type BalanceCardProps = {
+  balance?: string;
+  error?: string;
+};
 
 export default BalanceCardProps;
