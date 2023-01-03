@@ -15,10 +15,10 @@ export default function Table({ data }: TableProps) {
       <tbody>
         {data.map(({ date, type, username, value }) => (
           <tr key={date}>
-            <th>{username}</th>
-            <th>{value}</th>
-            <th>{type}</th>
-            <th>{date}</th>
+            <td>{username}</td>
+            <td>{value}</td>
+            <td>{type}</td>
+            <td>{date}</td>
           </tr>
         ))}
       </tbody>

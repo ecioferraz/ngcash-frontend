@@ -1,12 +1,7 @@
-type DataProps = {
-  date: string;
-  type: 'Cash-in' | 'Cash-out';
-  username: string;
-  value: string;
-};
+import SerializedTransactions from '../../types/SerializedTransactions';
 
 type TableProps = {
-  data: DataProps[];
+  data: SerializedTransactions[];
 };
 
 export default TableProps;

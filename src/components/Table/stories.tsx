@@ -7,7 +7,7 @@ export default {
     data: [
       {
         date: new Date().toLocaleString(),
-        type: 'Cash-in',
+        type: 'cash-in',
         username: 'username',
         value: '50,00',
       },
