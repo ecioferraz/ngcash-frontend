@@ -27,5 +27,5 @@ export default function useBalance() {
     getBalance();
   }, []);
 
-  return [balance, error];
+  return { balance, error };
 }
