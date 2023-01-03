@@ -34,7 +34,7 @@ const serializeTransactions = (
           ? debitedAccount.user.username
           : creditedAccount.user.username,
       type: creditedAccountId === accountId ? 'cash-in' : 'cash-out',
-      value,
+      value: (+value).toFixed(2),
     };
   });
 
