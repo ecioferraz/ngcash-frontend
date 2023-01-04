@@ -19,7 +19,7 @@ export default function TransactionForm() {
   useEffect(() => {
     setTransactionData((prev) => ({
       ...prev,
-      debitedUsername: readUser().username,
+      debitedUsername: readUser()?.username,
     }));
   }, []);
 
