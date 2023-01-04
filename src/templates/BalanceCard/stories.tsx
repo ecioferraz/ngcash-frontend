@@ -3,10 +3,10 @@ import BalanceCard from '.';
 import BalanceCardProps from './BalanceCardProps';
 
 export default {
-  args: { children: 'BalanceCard' },
-  argTypes: { children: { type: 'string' } },
+  args: { balance: '100.00' },
+  argTypes: { balance: { type: 'string' } },
   component: BalanceCard,
-  title: 'BalanceCard',
+  title: 'Templates/BalanceCard',
 } as Meta;
 
 export const Template: Story<BalanceCardProps> = (args) => (

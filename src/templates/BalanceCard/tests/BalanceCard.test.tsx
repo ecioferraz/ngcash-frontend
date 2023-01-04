@@ -22,9 +22,7 @@ describe('<BalanceCard />', () => {
           </h6>
           <p
             class="c0"
-          >
-            R$ 
-          </p>
+          />
         </section>
       </div>
     `);
