@@ -43,42 +43,48 @@ export default function LoginForm() {
 
   return (
     <Styled.Container onSubmit={handleSubmit}>
-      <TextCard>Bem-vindo(a)!</TextCard>
-      <TextInput
-        handleChange={({ target: { value } }) =>
-          setLogin((prev) => ({ ...prev, username: value }))
-        }
-        placeholder="Username"
-        value={username}
-      />
-      <TextInput
-        handleChange={({ target: { value } }) =>
-          setLogin((prev) => ({ ...prev, password: value }))
-        }
-        placeholder="Password"
-        value={password}
-      />
-      <TextCard as="p" size="xsmall">
-        {error}
-      </TextCard>
-      <Button
-        disabled={!password || !username}
-        handleClick={() =>
-          setLogin((prev) => ({ ...prev, submitMethod: 'login' }))
-        }
-        type="submit"
-      >
-        Login
-      </Button>
-      <Button
-        disabled={!password || !username}
-        handleClick={() =>
-          setLogin((prev) => ({ ...prev, submitMethod: 'register' }))
-        }
-        type="submit"
-      >
-        Register
-      </Button>
+      <TextCard size="large">Bem-vindo(a)!</TextCard>
+      <section>
+        <TextInput
+          handleChange={({ target: { value } }) =>
+            setLogin((prev) => ({ ...prev, username: value }))
+          }
+          placeholder="Username"
+          value={username}
+        />
+        <TextInput
+          handleChange={({ target: { value } }) =>
+            setLogin((prev) => ({ ...prev, password: value }))
+          }
+          placeholder="Password"
+          value={password}
+        />
+        {error && (
+          <TextCard as="p" size="xsmall">
+            {error}
+          </TextCard>
+        )}
+      </section>
+      <section>
+        <Button
+          disabled={!password || !username}
+          handleClick={() =>
+            setLogin((prev) => ({ ...prev, submitMethod: 'login' }))
+          }
+          type="submit"
+        >
+          Login
+        </Button>
+        <Button
+          disabled={!password || !username}
+          handleClick={() =>
+            setLogin((prev) => ({ ...prev, submitMethod: 'register' }))
+          }
+          type="submit"
+        >
+          Register
+        </Button>
+      </section>
     </Styled.Container>
   );
 }
