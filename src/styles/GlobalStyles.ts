@@ -36,6 +36,39 @@ export const GlobalStyles = createGlobalStyle`
     height: 80vh;
   }
 
+  form {
+    align-items: center;
+    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(6px);
+    padding: 1em 2em;
+    width: fit-content;
+
+    > h1 {
+      text-align: center;
+      width: 100%;
+    }
+
+    > * {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+    }
+
+    section > p {
+      color: ${({ theme }) => theme.colors.secondaryColor}
+    }
+
+    section > * {
+      margin: 0.3rem
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.font.family.secondary};
     margin: ${({ theme }) => theme.spacings.large} 0;
