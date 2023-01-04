@@ -2,6 +2,7 @@ import { isAxiosError } from 'axios';
 import { useEffect, useState } from 'react';
 import requestApi from '../api/axios';
 import { readUser } from '../services/localStorage';
+import formatToReal from '../utils/formatToReal';
 
 export default function useBalance() {
   const [balance, setBalance] = useState('');
@@ -18,7 +19,7 @@ export default function useBalance() {
           token,
         });
 
-        setBalance((+data).toFixed(2).replace('.', ','));
+        setBalance(formatToReal(+data));
       } catch (err) {
         if (isAxiosError(err)) setError(err.response?.data.message);
       }

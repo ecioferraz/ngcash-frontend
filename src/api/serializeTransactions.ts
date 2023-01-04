@@ -1,4 +1,5 @@
 import SerializedTransactions from '../types/SerializedTransactions';
+import formatToReal from '../utils/formatToReal';
 
 type Account = { user: { username: string } };
 
@@ -34,7 +35,7 @@ const serializeTransactions = (
           ? debitedAccount.user.username
           : creditedAccount.user.username,
       type: creditedAccountId === accountId ? 'cash-in' : 'cash-out',
-      value: (+value).toFixed(2),
+      value: formatToReal(+value),
     };
   });
 
