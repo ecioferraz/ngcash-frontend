@@ -2,6 +2,7 @@ import * as Styled from './styles';
 import TextInputProps from './TextInputProps';
 
 export default function TextInput({
+  datalist,
   handleChange,
   minLength,
   placeholder,
@@ -9,12 +10,22 @@ export default function TextInput({
   value,
 }: TextInputProps) {
   return (
-    <Styled.Container
-      minLength={minLength}
-      onChange={handleChange}
-      placeholder={placeholder}
-      type={type}
-      value={value}
-    />
+    <>
+      <Styled.Container
+        list={datalist && 'usernames'}
+        minLength={minLength}
+        onChange={handleChange}
+        placeholder={placeholder}
+        type={type}
+        value={value}
+      />
+      {datalist && (
+        <datalist id="usernames">
+          {datalist.map((username) => (
+            <option key={username} value={username} />
+          ))}
+        </datalist>
+      )}
+    </>
   );
 }
