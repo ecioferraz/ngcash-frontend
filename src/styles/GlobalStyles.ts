@@ -24,7 +24,11 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 15%;
+    padding: 10%;
+  }
+
+  main > * {
+    margin: 1rem
   }
 
   h1, h2, h3, h4, h5, h6 {
