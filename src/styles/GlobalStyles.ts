@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.8s;
   }
 
   html {
@@ -29,6 +30,10 @@ export const GlobalStyles = createGlobalStyle`
 
   main > * {
     margin: 1rem
+  }
+
+  main:has(img) {
+    height: 80vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
