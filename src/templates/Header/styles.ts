@@ -10,8 +10,6 @@ export const Container = styled.header`
     justify-content: space-between;
     height: 6rem;
     padding: 0 3vw;
-    position: fixed;
-    top: 0;
     width: 100%;
     -webkit-backdrop-filter: blur(6px);
 
