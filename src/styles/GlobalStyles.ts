@@ -13,6 +13,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.font.family.default};
   }
