@@ -6,7 +6,7 @@ export default {
   args: { children: 'Header' },
   argTypes: { children: { type: 'string' } },
   component: Header,
-  title: 'Header',
+  title: 'Templates/Header',
 } as Meta;
 
 export const Template: Story = (args) => <Header {...args} />;
