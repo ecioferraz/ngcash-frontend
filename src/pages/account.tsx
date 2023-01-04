@@ -15,11 +15,13 @@ export default function Account() {
   }, []);
 
   return (
-    <main>
+    <>
       <Header />
-      <BalanceCard balance={balance} error={error} />
-      <TransactionForm />
-      <TransactionsTable />
-    </main>
+      <main>
+        <BalanceCard balance={balance} error={error} />
+        <TransactionForm />
+        <TransactionsTable />
+      </main>
+    </>
   );
 }
