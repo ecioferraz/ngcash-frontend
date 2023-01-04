@@ -6,8 +6,18 @@ describe('<LoginForm />', () => {
     const { container } = renderTheme(<LoginForm />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c2 > svg {
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+
       .c0 {
         font-size: 5.6rem;
+        text-transform: none;
+      }
+
+      .c1 {
+        font-size: 0.8rem;
         text-transform: none;
       }
 
@@ -38,18 +48,18 @@ describe('<LoginForm />', () => {
             type="text"
             value=""
           />
-          <h6
-            class="c0"
+          <p
+            class="c1"
           />
           <button
-            class=""
+            class="c2"
             disabled=""
             type="submit"
           >
             Login
           </button>
           <button
-            class=""
+            class="c2"
             disabled=""
             type="submit"
           >

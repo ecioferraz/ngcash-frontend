@@ -6,6 +6,11 @@ describe('<TransactionForm />', () => {
     const { container } = renderTheme(<TransactionForm />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 > svg {
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+
       <div>
         <form
           class=""
@@ -23,7 +28,8 @@ describe('<TransactionForm />', () => {
             value=""
           />
           <button
-            class=""
+            class="c0"
+            disabled=""
             type="submit"
           >
             Realizar transferência
