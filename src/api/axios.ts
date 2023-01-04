@@ -17,10 +17,10 @@ export default async function requestApi({
   id,
   token,
 }: AxiosProps) {
-  return axios(endpoint, {
+  return axios(`${endpoint}/${id || ''}`, {
     data: body,
     headers: { Authorization: `Bearer ${token}` },
     method,
-    params: id || body,
+    params: body,
   });
 }
