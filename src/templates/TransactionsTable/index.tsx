@@ -19,8 +19,14 @@ export default function TransactionsTable() {
       <TextCard size="large" uppercase>
         Histórico de transações
       </TextCard>
-      {error ? (
-        <TextCard>{error}</TextCard>
+      {!transactions.length && !error ? (
+        <TextCard as="p" size="small">
+          Você ainda não realizou transações.
+        </TextCard>
+      ) : error ? (
+        <TextCard as="p" size="small">
+          {error}
+        </TextCard>
       ) : (
         <>
           <Styled.Filters>
@@ -47,7 +53,7 @@ export default function TransactionsTable() {
               </Button>
             </Styled.Order>
           </Styled.Filters>
-          <Table data={transactions} />
+          <Table data={transactions} loading={loading} />
         </>
       )}
     </Styled.Container>

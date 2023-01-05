@@ -6,94 +6,47 @@ describe('<TransactionTable />', () => {
     const { container } = renderTheme(<TransactionTable />);
 
     expect(container).toMatchInlineSnapshot(`
-      .c2 {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
+      .c1 {
+        font-size: 3.2rem;
+        text-transform: uppercase;
       }
 
-      .c1 > svg {
-        height: 1.6rem;
-        width: 1.6rem;
+      .c2 {
+        font-size: 1.6rem;
+        text-transform: none;
       }
 
       .c0 {
-        font-size: 5.6rem;
-        text-transform: none;
+        text-align: center;
+        width: 100%;
+      }
+
+      .c0 > h1 {
+        margin-bottom: 0;
       }
 
       @media (max-width:768px) {
         .c0 {
-          font-size: 4.0rem;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
         }
       }
 
       <div>
         <section
-          class=""
+          class="c0"
         >
           <h1
-            class="c0"
+            class="c1"
           >
             Histórico de transações
           </h1>
-          <select
-            class=""
+          <p
+            class="c2"
           >
-            <option
-              value="all"
-            >
-              Todas
-            </option>
-            <option
-              value="cash-in"
-            >
-              Entradas
-            </option>
-            <option
-              value="cash-out"
-            >
-              Saídas
-            </option>
-          </select>
-          <button
-            class="c1"
-            type="button"
-          >
-            <svg
-              aria-hidden="true"
-              class="c2"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m7 10 5 5 5-5H7z"
-              />
-            </svg>
-          </button>
-          <table
-            class=""
-          >
-            <thead>
-              <tr>
-                <th>
-                  De/para
-                </th>
-                <th>
-                  Valor (R$)
-                </th>
-                <th>
-                  Tipo
-                </th>
-                <th>
-                  Data
-                </th>
-              </tr>
-            </thead>
-            <tbody />
-          </table>
+            Você ainda não realizou transações.
+          </p>
         </section>
       </div>
     `);

@@ -62,7 +62,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     section > p {
-      color: ${({ theme }) => theme.colors.secondaryColor}
+      color: ${({ theme }) => theme.colors.secondaryColor};
+      margin: ${({ theme }) => theme.spacings.xsmall} 0;
     }
 
   }

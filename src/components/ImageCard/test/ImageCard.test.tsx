@@ -8,14 +8,10 @@ describe('<ImageCard />', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
-        width: 100%;
-      }
-
       <div>
         <img
           alt="test"
-          class="c0"
+          class=""
           src="../../assets/images/ngcash-logo.jpg"
         />
       </div>

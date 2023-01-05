@@ -7,10 +7,6 @@ describe('<Header />', () => {
 
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        width: 100%;
-      }
-
-      .c2 {
         font-size: 1.6rem;
         text-transform: none;
       }
@@ -34,8 +30,6 @@ describe('<Header />', () => {
         justify-content: space-between;
         height: 6rem;
         padding: 0 3vw;
-        position: fixed;
-        top: 0;
         width: 100%;
         -webkit-backdrop-filter: blur(6px);
       }
@@ -55,11 +49,14 @@ describe('<Header />', () => {
         -ms-flex-pack: center;
         justify-content: center;
         height: 100%;
+        padding: 1rem;
         -webkit-text-decoration: none;
         text-decoration: none;
         -webkit-transition: 0.5s;
         transition: 0.5s;
-        width: 13vw;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
       }
 
       .c0 > a:hover {
@@ -82,14 +79,14 @@ describe('<Header />', () => {
         >
           <img
             alt="Logo da NG.CASH"
-            class="c1"
+            class=""
             src="../../assets/images/ngcash-logo-small.png"
           />
           <a
             href="/login"
           >
             <p
-              class="c2"
+              class="c1"
             >
               Logout
             </p>

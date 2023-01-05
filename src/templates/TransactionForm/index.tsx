@@ -2,6 +2,7 @@ import { isAxiosError } from 'axios';
 import { FormEvent, useEffect, useState } from 'react';
 import requestApi from '../../api/axios';
 import Button from '../../components/Button';
+import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
 import useUsers from '../../hooks/useUsers';
@@ -11,12 +12,13 @@ import * as Styled from './styles';
 export default function TransactionForm() {
   const [responseMessage, setResponseMessage] = useState('');
   const [transactionData, setTransactionData] = useState({
-    loading: false,
     creditedUsername: '',
     debitedUsername: '',
+    loading: false,
     value: '',
   });
   const { users } = useUsers();
+  const { creditedUsername, loading } = transactionData;
 
   useEffect(() => {
     setTransactionData((prev) => ({
@@ -65,7 +67,7 @@ export default function TransactionForm() {
             }));
           }}
           placeholder="Transferir para..."
-          value={transactionData.creditedUsername}
+          value={creditedUsername}
         />
         <TextInput
           handleChange={({ target: { value } }) => {
@@ -88,6 +90,7 @@ export default function TransactionForm() {
           Realizar transferência
         </Button>
       </section>
+      {loading && <Loading />}
     </Styled.Container>
   );
 }

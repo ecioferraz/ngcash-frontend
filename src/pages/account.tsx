@@ -8,7 +8,7 @@ import TransactionForm from '../templates/TransactionForm';
 import TransactionsTable from '../templates/TransactionsTable';
 
 export default function Account() {
-  const { balance, error } = useBalance();
+  const { balance, error, loading } = useBalance();
 
   useEffect(() => {
     readUser() ? null : Router.push('/login');
@@ -19,7 +19,7 @@ export default function Account() {
       <Header />
       <main>
         <section className="account-page">
-          <BalanceCard balance={balance} error={error} />
+          <BalanceCard balance={balance} error={error} loading={loading} />
           <TransactionForm />
         </section>
         <TransactionsTable />
