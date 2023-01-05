@@ -16,23 +16,37 @@ export default function TransactionsTable() {
 
   return (
     <Styled.Container>
-      <TextCard>Histórico de transações</TextCard>
+      <TextCard size="large" uppercase>
+        Histórico de transações
+      </TextCard>
       {error ? (
         <TextCard>{error}</TextCard>
       ) : (
         <>
-          <Select
-            handleChange={({ target: { value } }) =>
-              setType(value as TransactionTypes)
-            }
-          />
-          <Button
-            handleClick={() =>
-              setOrderBy((prev) => (prev === 'desc' ? 'asc' : 'desc'))
-            }
-          >
-            {orderBy === 'desc' ? <ArrowDropDown /> : <ArrowDropUp />}
-          </Button>
+          <Styled.Filters>
+            <Styled.Order>
+              <TextCard as="p" size="small">
+                Tipo:
+              </TextCard>
+              <Select
+                handleChange={({ target: { value } }) =>
+                  setType(value as TransactionTypes)
+                }
+              />
+            </Styled.Order>
+            <Styled.Order>
+              <TextCard as="p" size="small">
+                Ordenar por data:
+              </TextCard>
+              <Button
+                handleClick={() =>
+                  setOrderBy((prev) => (prev === 'desc' ? 'asc' : 'desc'))
+                }
+              >
+                {orderBy === 'desc' ? <ArrowDropDown /> : <ArrowDropUp />}
+              </Button>
+            </Styled.Order>
+          </Styled.Filters>
           <Table data={transactions} />
         </>
       )}
