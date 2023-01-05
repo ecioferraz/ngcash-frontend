@@ -18,8 +18,10 @@ export default function Account() {
     <>
       <Header />
       <main>
-        <BalanceCard balance={balance} error={error} />
-        <TransactionForm />
+        <section className="account-page">
+          <BalanceCard balance={balance} error={error} />
+          <TransactionForm />
+        </section>
         <TransactionsTable />
       </main>
     </>

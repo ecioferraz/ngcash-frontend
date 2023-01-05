@@ -68,7 +68,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   section > * {
-    margin: 0.3rem
+    margin: 0.3rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -79,17 +79,25 @@ export const GlobalStyles = createGlobalStyle`
     margin: ${({ theme }) => theme.spacings.medium} 0;
   }
 
-  ul, ol {
-    margin: ${({ theme }) => theme.spacings.medium};
-    padding: ${({ theme }) => theme.spacings.medium};
-  }
-
-  a {
-    color: ${({ theme }) => theme.colors.secondaryColor};
-  }
-
-  .table {
+  .account-page {
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    overflow-y: auto;
+  }
+
+  .account-page > * {
+    margin: 0.8rem;
+  }
+
+  @media ${({ theme }) => theme.media.lteMedium} {
+    .account-page {
+      flex-direction: column;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 `;
