@@ -81,7 +81,6 @@ export default function TransactionForm() {
           <TextCard as="p" size="xsmall">
             {responseMessage}
           </TextCard>
-          // conditional color if error or success
         )}
       </section>
       <section>
