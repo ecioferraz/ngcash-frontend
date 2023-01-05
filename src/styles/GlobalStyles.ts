@@ -2,9 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
+    box-sizing: border-box;
+    font-family: ${({ theme }) => theme.font.family.default};
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     transition: 0.8s;
   }
 
@@ -25,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10%;
+    padding: 5% 10%;
   }
 
   main > * {
@@ -64,13 +65,13 @@ export const GlobalStyles = createGlobalStyle`
       color: ${({ theme }) => theme.colors.secondaryColor}
     }
 
-    section > * {
-      margin: 0.3rem
-    }
+  }
+
+  section > * {
+    margin: 0.3rem
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }) => theme.font.family.secondary};
     margin: ${({ theme }) => theme.spacings.large} 0;
   }
 

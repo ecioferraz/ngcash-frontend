@@ -9,8 +9,7 @@ export const theme = {
   },
   font: {
     family: {
-      default: "'Open Sans', sans-serif",
-      secondary: "'Montserrat', sans-serif",
+      default: '"IBM Plex Sans", sans-serif',
     },
     sizes: {
       xsmall: '0.9rem',
