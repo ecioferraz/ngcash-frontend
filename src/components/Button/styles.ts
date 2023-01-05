@@ -32,14 +32,10 @@ export const Container = styled.button`
       text-decoration: none;
     }
 
-    :active {
-      background: ${theme.colors.lightGreen};
-      box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+    :not([disabled]):active {
+      background: ${theme.colors.mediumGray};
       outline: 0;
       transition: none;
-    }
-
-    :not([disabled]):active {
       box-shadow: ${theme.colors.mediumGray} 2px 2px 0 0,
         ${theme.colors.black} 2px 2px 0 1px;
       translate: 2px, 2px;
