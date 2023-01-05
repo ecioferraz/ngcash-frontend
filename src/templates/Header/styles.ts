@@ -19,9 +19,10 @@ export const Container = styled.header`
       display: flex;
       justify-content: center;
       height: 100%;
+      padding: 1rem;
       text-decoration: none;
       transition: 0.5s;
-      width: 13vw;
+      width: fit-content;
     }
 
     > a:hover {
