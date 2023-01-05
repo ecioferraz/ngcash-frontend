@@ -3,13 +3,14 @@ import Router from 'next/router';
 import { FormEvent, useState } from 'react';
 import requestApi from '../../api/axios';
 import Button from '../../components/Button';
+import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
 import { saveUser } from '../../services/localStorage';
 import * as Styled from './styles';
 
 export default function LoginForm() {
-  const [login, setLogin] = useState({
+  const [loginInfo, setLoginInfo] = useState({
     loading: false,
     submitMethod: '',
     password: '',
@@ -17,27 +18,32 @@ export default function LoginForm() {
   });
   const [error, setError] = useState('');
 
-  const { loading, password, submitMethod, username } = login;
+  const { loading, password, submitMethod, username } = loginInfo;
+
+  const login = async () =>
+    requestApi({ endpoint: 'login', method: 'get', body: loginInfo });
+
+  const register = async () =>
+    requestApi({ endpoint: 'register', method: 'post', body: loginInfo });
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      setLogin((prev) => ({ ...prev, loading: true }));
+      setLoginInfo((prev) => ({ ...prev, loading: true }));
       setError('');
 
-      const { data } = await requestApi({
-        endpoint: submitMethod,
-        method: submitMethod === 'login' ? 'get' : 'post',
-        body: login,
-      });
+      const { data } =
+        submitMethod === 'login'
+          ? await login()
+          : await register().then(() => login());
 
       saveUser(data);
       Router.push('/account');
     } catch (err) {
       if (isAxiosError(err)) setError(err.response?.data.message);
     } finally {
-      setLogin((prev) => ({ ...prev, loading: false, submitMethod: '' }));
+      setLoginInfo((prev) => ({ ...prev, loading: false, submitMethod: '' }));
     }
   };
 
@@ -47,14 +53,14 @@ export default function LoginForm() {
       <section>
         <TextInput
           handleChange={({ target: { value } }) =>
-            setLogin((prev) => ({ ...prev, username: value }))
+            setLoginInfo((prev) => ({ ...prev, username: value }))
           }
           placeholder="Username"
           value={username}
         />
         <TextInput
           handleChange={({ target: { value } }) =>
-            setLogin((prev) => ({ ...prev, password: value }))
+            setLoginInfo((prev) => ({ ...prev, password: value }))
           }
           placeholder="Password"
           value={password}
@@ -69,7 +75,7 @@ export default function LoginForm() {
         <Button
           disabled={!password || !username}
           handleClick={() =>
-            setLogin((prev) => ({ ...prev, submitMethod: 'login' }))
+            setLoginInfo((prev) => ({ ...prev, submitMethod: 'login' }))
           }
           type="submit"
         >
@@ -78,13 +84,14 @@ export default function LoginForm() {
         <Button
           disabled={!password || !username}
           handleClick={() =>
-            setLogin((prev) => ({ ...prev, submitMethod: 'register' }))
+            setLoginInfo((prev) => ({ ...prev, submitMethod: 'register' }))
           }
           type="submit"
         >
           Register
         </Button>
       </section>
+      {loading && <Loading />}
     </Styled.Container>
   );
 }
