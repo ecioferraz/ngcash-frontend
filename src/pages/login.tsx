@@ -10,7 +10,7 @@ export default function Login() {
   }, []);
 
   return (
-    <main>
+    <main className="login-page">
       <ImageCard
         altText="Logo da Ng.Cash"
         src={'../../assets/images/ngcash-logo.jpg'}

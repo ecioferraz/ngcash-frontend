@@ -79,7 +79,11 @@ export const GlobalStyles = createGlobalStyle`
     margin: ${({ theme }) => theme.spacings.medium} 0;
   }
 
-  .account-page {
+  .login-page {
+    height: 100vh;
+  }
+
+  .account-page, .login-page {
     align-items: center;
     flex-direction: row;
     display: flex;
@@ -92,8 +96,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   @media ${({ theme }) => theme.media.lteMedium} {
-    .account-page {
+    .account-page, .login-page {
       flex-direction: column;
+      justify-content: center;
     }
 
     img {
