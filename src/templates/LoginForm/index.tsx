@@ -62,8 +62,10 @@ export default function LoginForm() {
           handleChange={({ target: { value } }) =>
             setLoginInfo((prev) => ({ ...prev, password: value }))
           }
+          minLength={8}
           placeholder="Password"
           value={password}
+          type="password"
         />
         {error && (
           <TextCard as="p" size="xsmall">

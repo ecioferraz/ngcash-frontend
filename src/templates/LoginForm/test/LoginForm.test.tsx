@@ -99,8 +99,9 @@ describe('<LoginForm />', () => {
             />
             <input
               class="c1"
+              minlength="8"
               placeholder="Password"
-              type="text"
+              type="password"
               value=""
             />
           </section>
