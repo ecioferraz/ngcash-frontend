@@ -1,5 +1,5 @@
 import { PropsWithChildren, useState } from 'react';
-import { UpdateContext } from '../contexts/UpdateContext';
+import { UpdateContext } from '../contexts/Update.context';
 
 export default function UpdateProvider({ children }: PropsWithChildren) {
   const [update, setUpdate] = useState(false);

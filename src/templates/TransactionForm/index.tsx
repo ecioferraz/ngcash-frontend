@@ -5,7 +5,7 @@ import Button from '../../components/Button';
 import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
-import { useUpdateContext } from '../../contexts/UpdateContext';
+import { useUpdateContext } from '../../contexts/Update.context';
 import useUsers from '../../hooks/useUsers';
 import { readUser } from '../../services/localStorage';
 import * as Styled from './styles';

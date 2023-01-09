@@ -1,6 +1,6 @@
 import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
-import { useUpdateContext } from '../../contexts/UpdateContext';
+import { useUpdateContext } from '../../contexts/Update.context';
 import useBalance from '../../hooks/useBalance';
 import * as Styled from './styles';
 
