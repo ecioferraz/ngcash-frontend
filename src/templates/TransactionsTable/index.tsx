@@ -13,12 +13,21 @@ import * as Styled from './styles';
 export default function TransactionsTable() {
   const [type, setType] = useState<TransactionTypes>('all');
   const [orderBy, setOrderBy] = useState<OrderBy>('desc');
+  const [showMore, setShowMore] = useState(true);
   const { update } = useUpdateContext();
   const { error, loading, transactions } = useTransactions(
     orderBy,
     type,
     update,
   );
+
+  const renderedTransactions = showMore
+    ? transactions.slice(0, 10)
+    : transactions;
+
+  const moreOrLessButton = showMore ? 'Mostrar mais' : 'Mostrar menos';
+
+  const handleMoreOrLessButton = () => setShowMore(!showMore);
 
   const handleOrderByChange = () =>
     setOrderBy((prev) => (prev === 'desc' ? 'asc' : 'desc'));
@@ -60,7 +69,12 @@ export default function TransactionsTable() {
               </Button>
             </Styled.Order>
           </Styled.Filters>
-          <Table data={transactions} loading={loading} />
+          <Table data={renderedTransactions} loading={loading} />
+          {transactions.length >= 10 ? (
+            <Button handleClick={handleMoreOrLessButton}>
+              {moreOrLessButton}
+            </Button>
+          ) : null}
         </>
       )}
     </Styled.Container>

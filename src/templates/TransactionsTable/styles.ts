@@ -5,8 +5,17 @@ ${({ theme }) => css`
   text-align: center;
   width: 100%;
 
+  > * {
+    margin: 2rem 0;
+  }
+
   > h1 {
     margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  > button {
+    margin-top: 0;
   }
 
   @media ${theme.media.lteMedium} {
