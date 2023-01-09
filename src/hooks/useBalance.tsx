@@ -27,8 +27,8 @@ export default function useBalance(update: boolean) {
       } catch (err) {
         if (isAxiosError(err)) setError(err.response?.data.message);
         if (error.includes('Unauthorized')) {
-          Router.push('login');
           removeUser();
+          Router.push('login');
         }
       } finally {
         setLoading(false);

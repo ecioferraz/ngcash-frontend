@@ -1,8 +1,9 @@
 import { isAxiosError } from 'axios';
+import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import requestApi from '../api/axios';
 import serializeTransactions from '../api/serializeTransactions';
-import { readUser } from '../services/localStorage';
+import { readUser, removeUser } from '../services/localStorage';
 import OrderBy from '../types/OrderBy';
 import SerializedTransactions from '../types/SerializedTransactions';
 import TransactionTypes from '../types/TransactionTypes';
@@ -33,13 +34,17 @@ export default function useTransactions(
         setTransactions(serializeTransactions(data, accountId));
       } catch (err) {
         if (isAxiosError(err)) setError(err.response?.data.message);
+        if (error.includes('Unauthorized')) {
+          removeUser();
+          Router.push('login');
+        }
       } finally {
         setLoading(false);
       }
     };
 
     getTransactions();
-  }, [orderBy, type, update]);
+  }, [error, orderBy, type, update]);
 
   return { loading, transactions, error };
 }
