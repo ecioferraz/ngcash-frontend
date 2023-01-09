@@ -18,12 +18,14 @@ ${({ theme }) => css`
 export const Filters = styled.section`
   align-items: center;
   display: flex;
-  justify-content: space-evenly;
   width: 100%;
 `;
 
 export const Order = styled.section`
   align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
   > p {
     margin: 0;
