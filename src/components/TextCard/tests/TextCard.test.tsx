@@ -91,4 +91,19 @@ describe('<TextCard />', () => {
 
     expect(heading).toHaveStyle({ 'text-transform': 'uppercase' });
   });
+
+  it('should render successful transaction message', () => {
+    renderTheme(
+      <TextCard as="p" size="xsmall">
+        Transação concluída!
+      </TextCard>,
+    );
+
+    const paragraph = screen.getByText('Transação concluída!');
+
+    expect(paragraph).toHaveStyle({
+      color: theme.colors.lightGreen,
+      'font-size': theme.font.sizes.xsmall,
+    });
+  });
 });
