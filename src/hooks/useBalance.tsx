@@ -1,10 +1,11 @@
 import { isAxiosError } from 'axios';
+import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import requestApi from '../api/axios';
-import { readUser } from '../services/localStorage';
+import { readUser, removeUser } from '../services/localStorage';
 import formatToReal from '../utils/formatToReal';
 
-export default function useBalance() {
+export default function useBalance(update: boolean) {
   const [balance, setBalance] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -25,13 +26,17 @@ export default function useBalance() {
         setBalance(formatToReal(+data));
       } catch (err) {
         if (isAxiosError(err)) setError(err.response?.data.message);
+        if (error.includes('Unauthorized')) {
+          Router.push('login');
+          removeUser();
+        }
       } finally {
         setLoading(false);
       }
     };
 
     getBalance();
-  }, []);
+  }, [error, update]);
 
   return { balance, error, loading };
 }

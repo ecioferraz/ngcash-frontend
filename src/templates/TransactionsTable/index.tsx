@@ -4,6 +4,7 @@ import Button from '../../components/Button';
 import Select from '../../components/Select';
 import Table from '../../components/Table';
 import TextCard from '../../components/TextCard';
+import { useUpdateContext } from '../../contexts/UpdateContext';
 import useTransactions from '../../hooks/useTransactions';
 import OrderBy from '../../types/OrderBy';
 import TransactionTypes from '../../types/TransactionTypes';
@@ -12,7 +13,17 @@ import * as Styled from './styles';
 export default function TransactionsTable() {
   const [type, setType] = useState<TransactionTypes>('all');
   const [orderBy, setOrderBy] = useState<OrderBy>('desc');
-  const { error, loading, transactions } = useTransactions(orderBy, type);
+  const { update } = useUpdateContext();
+  const { error, loading, transactions } = useTransactions(
+    orderBy,
+    type,
+    update,
+  );
+
+  const handleOrderByChange = () =>
+    setOrderBy((prev) => (prev === 'desc' ? 'asc' : 'desc'));
+
+  const handleTypeChange = (value: TransactionTypes) => setType(value);
 
   return (
     <Styled.Container>
@@ -36,7 +47,7 @@ export default function TransactionsTable() {
               </TextCard>
               <Select
                 handleChange={({ target: { value } }) =>
-                  setType(value as TransactionTypes)
+                  handleTypeChange(value as TransactionTypes)
                 }
               />
             </Styled.Order>
@@ -44,11 +55,7 @@ export default function TransactionsTable() {
               <TextCard as="p" size="small">
                 Ordenar por data:
               </TextCard>
-              <Button
-                handleClick={() =>
-                  setOrderBy((prev) => (prev === 'desc' ? 'asc' : 'desc'))
-                }
-              >
+              <Button handleClick={handleOrderByChange}>
                 {orderBy === 'desc' ? <ArrowDropDown /> : <ArrowDropUp />}
               </Button>
             </Styled.Order>

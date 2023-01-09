@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
+import { useUpdateContext } from '../../contexts/UpdateContext';
 import useUsers from '../../hooks/useUsers';
 import { readUser } from '../../services/localStorage';
 import * as Styled from './styles';
@@ -17,7 +18,9 @@ export default function TransactionForm() {
     loading: false,
     value: '',
   });
+  const { triggerUpdate } = useUpdateContext();
   const { users } = useUsers();
+
   const { creditedUsername, loading } = transactionData;
 
   useEffect(() => {
@@ -42,6 +45,7 @@ export default function TransactionForm() {
         token,
       });
 
+      triggerUpdate();
       setResponseMessage('Transação concluída!');
       setTransactionData((prev) => ({
         ...prev,
@@ -52,6 +56,7 @@ export default function TransactionForm() {
       if (isAxiosError(err)) setResponseMessage(err.response?.data.message);
     } finally {
       setTransactionData((prev) => ({ ...prev, loading: false }));
+      triggerUpdate();
     }
   };
 

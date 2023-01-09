@@ -10,6 +10,7 @@ import TransactionTypes from '../types/TransactionTypes';
 export default function useTransactions(
   orderBy: OrderBy,
   type: TransactionTypes,
+  update: boolean,
 ) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,7 @@ export default function useTransactions(
     };
 
     getTransactions();
-  }, [type, orderBy]);
+  }, [orderBy, type, update]);
 
-  return { transactions, error, loading };
+  return { loading, transactions, error };
 }
