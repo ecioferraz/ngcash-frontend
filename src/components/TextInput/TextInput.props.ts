@@ -5,8 +5,8 @@ type TextInputProps = {
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
   minLength?: number;
   placeholder: string;
+  value: string;
   type?: HTMLInputTypeAttribute;
-  value?: string;
 };
 
 export default TextInputProps;

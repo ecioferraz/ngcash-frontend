@@ -1,4 +1,4 @@
-import TableProps from './TableProps';
+import TableProps from './Table.props';
 import * as Styled from './styles';
 import Loading from '../Loading';
 

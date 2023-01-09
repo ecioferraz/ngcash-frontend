@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components';
-import TextCardProps from './TextCardProps';
+import TextCardProps from './TextCard.props';
 
 const textSize = {
   xsmall: (theme: DefaultTheme) => css`
@@ -39,7 +39,7 @@ const mediaFont = (theme: DefaultTheme) => css`
 
 const successTextColor = (message: string) =>
   css`${({ theme }) =>
-    message.includes('Transação concluída') && {
+    message.includes('Transação concluída!') && {
       color: theme.colors.lightGreen,
     }}`;
 

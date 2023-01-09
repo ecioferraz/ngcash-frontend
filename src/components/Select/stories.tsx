@@ -1,10 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import SelectProps from './SelectProps';
+import SelectProps from './Select.props';
 import Select from '.';
 
 export default {
-  args: { children: 'Select' },
-  argTypes: { children: { type: 'string' } },
   component: Select,
   title: 'Components/Select',
 } as Meta;

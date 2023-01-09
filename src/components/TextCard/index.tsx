@@ -1,4 +1,4 @@
-import TextCardProps from './TextCardProps';
+import TextCardProps from './TextCard.props';
 import * as Styled from './styles';
 
 export default function TextCard({

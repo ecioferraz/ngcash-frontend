@@ -1,13 +1,13 @@
 import * as Styled from './styles';
-import TextInputProps from './TextInputProps';
+import TextInputProps from './TextInput.props';
 
 export default function TextInput({
   datalist,
   handleChange,
   minLength,
   placeholder,
-  type = 'text',
   value,
+  type = 'text',
 }: TextInputProps) {
   return (
     <>
@@ -16,8 +16,8 @@ export default function TextInput({
         minLength={minLength}
         onChange={handleChange}
         placeholder={placeholder}
-        type={type}
         value={value}
+        type={type}
       />
       {datalist && (
         <datalist id="usernames">

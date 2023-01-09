@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import TextCard from '.';
-import TextCardProps from './TextCardProps';
+import TextCardProps from './TextCard.props';
 
 export default {
-  args: { children: 'TextCard' },
-  argTypes: { children: { type: 'string' } },
+  args: { as: 'h1', children: 'TextCard', size: 'huge', uppercase: false },
+  argTypes: { children: { type: 'string' }, uppercase: { type: 'boolean' } },
   title: 'Components/TextCard',
   component: TextCard,
 } as Meta;

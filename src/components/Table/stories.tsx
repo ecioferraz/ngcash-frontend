@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import TableProps from './TableProps';
+import TableProps from './Table.props';
 import Table from '.';
 
 export default {
@@ -12,8 +12,9 @@ export default {
         value: '50,00',
       },
     ],
+    loading: false,
   },
-  argTypes: { data: [{ type: 'string' }] },
+  argTypes: { data: [{ type: 'string' }], loading: { type: 'boolean' } },
   component: Table,
   title: 'Components/Table',
 } as Meta;

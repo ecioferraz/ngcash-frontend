@@ -1,4 +1,4 @@
-import SelectProps from './SelectProps';
+import SelectProps from './Select.props';
 import * as Styled from './styles';
 
 export default function Select({ handleChange }: SelectProps) {

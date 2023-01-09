@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import ImageCardProps from './ImageCardProps';
+import ImageCardProps from './ImageCard.props';
 import ImageCard from '.';
 
 export default {
   args: {
-    altText: 'Ng.Cash logo',
+    altText: 'Random image',
     src: 'https://source.unsplash.com/random/100x100?=1',
   },
   argTypes: { altText: { type: 'string' }, src: { type: 'string' } },
