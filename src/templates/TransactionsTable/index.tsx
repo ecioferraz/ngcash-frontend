@@ -30,7 +30,7 @@ export default function TransactionsTable() {
       <TextCard size="large" uppercase>
         Histórico de transações
       </TextCard>
-      {!transactions.length && !error ? (
+      {!transactions.length && !error && !loading ? (
         <TextCard as="p" size="small">
           Você ainda não realizou transações.
         </TextCard>
