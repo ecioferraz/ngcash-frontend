@@ -19,7 +19,7 @@ export default function TransactionsTable({
     useAccountContext();
 
   const renderedTransactions = showMore
-    ? transactions?.slice(0, 10)
+    ? transactions.slice(0, 10)
     : transactions;
 
   const moreOrLessButton = showMore ? 'Mostrar mais' : 'Mostrar menos';
