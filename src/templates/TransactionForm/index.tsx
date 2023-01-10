@@ -1,11 +1,12 @@
 import { isAxiosError } from 'axios';
 import { FormEvent, useEffect, useState } from 'react';
+import CurrencyInput from 'react-currency-input-field';
 import requestApi from '../../api/axios';
 import Button from '../../components/Button';
 import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
 import TextInput from '../../components/TextInput';
-import { useUpdateContext } from '../../contexts/Update.context';
+import { useAccountContext } from '../../contexts/Account.context';
 import useUsers from '../../hooks/useUsers';
 import { readUser } from '../../services/localStorage';
 import * as Styled from './styles';
@@ -18,7 +19,7 @@ export default function TransactionForm() {
     loading: false,
     value: '',
   });
-  const { triggerUpdate } = useUpdateContext();
+  const { triggerUpdate } = useAccountContext();
   const { users } = useUsers();
 
   const { creditedUsername, loading } = transactionData;
@@ -41,7 +42,10 @@ export default function TransactionForm() {
       await requestApi({
         endpoint: 'transactions',
         method: 'post',
-        body: transactionData,
+        body: {
+          ...transactionData,
+          value: transactionData.value.replace(',', '.'),
+        },
         token,
       });
 
@@ -74,14 +78,17 @@ export default function TransactionForm() {
           placeholder="Transferir para..."
           value={creditedUsername}
         />
-        <TextInput
-          handleChange={({ target: { value } }) => {
+        <CurrencyInput
+          className="currency-input"
+          decimalScale={2}
+          intlConfig={{ currency: 'BRL', locale: 'pt-BR' }}
+          placeholder="Valor (R$)"
+          onValueChange={(value) =>
             setTransactionData((prev) => ({
               ...prev,
-              value: value.replace(',', '.'),
-            }));
-          }}
-          placeholder="Valor (R$)"
+              value: value as string,
+            }))
+          }
           value={transactionData.value}
         />
         {responseMessage && (

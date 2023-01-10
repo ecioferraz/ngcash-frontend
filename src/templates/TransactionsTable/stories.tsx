@@ -1,11 +1,23 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import TransactionsTable from '.';
+import { transactionsMock } from './tests/mock';
+import TransactionTableProps from './TransactionsTable.props';
 
 export default {
-  args: { children: 'TransactionsTable' },
-  argTypes: { children: { type: 'string' } },
+  args: {
+    error: '',
+    loading: false,
+    transactions: transactionsMock,
+  },
+  argTypes: {
+    error: { type: 'string' },
+    loading: { type: 'boolean' },
+    transactions: [{ type: 'string' }],
+  },
   component: TransactionsTable,
   title: 'Templates/TransactionsTable',
 } as Meta;
 
-export const Template: Story = (args) => <TransactionsTable {...args} />;
+export const Template: Story<TransactionTableProps> = (args) => (
+  <TransactionsTable {...args} />
+);

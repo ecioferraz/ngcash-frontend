@@ -4,35 +4,27 @@ import Button from '../../components/Button';
 import Select from '../../components/Select';
 import Table from '../../components/Table';
 import TextCard from '../../components/TextCard';
-import { useUpdateContext } from '../../contexts/Update.context';
-import useTransactions from '../../hooks/useTransactions';
-import OrderBy from '../../types/OrderBy';
+import { useAccountContext } from '../../contexts/Account.context';
 import TransactionTypes from '../../types/TransactionTypes';
 import * as Styled from './styles';
+import TransactionTableProps from './TransactionsTable.props';
 
-export default function TransactionsTable() {
-  const [type, setType] = useState<TransactionTypes>('all');
-  const [orderBy, setOrderBy] = useState<OrderBy>('desc');
+export default function TransactionsTable({
+  error,
+  loading,
+  transactions = [],
+}: TransactionTableProps) {
   const [showMore, setShowMore] = useState(true);
-  const { update } = useUpdateContext();
-  const { error, loading, transactions } = useTransactions(
-    orderBy,
-    type,
-    update,
-  );
+  const { handleOrderByChange, handleTypeChange, orderBy } =
+    useAccountContext();
 
   const renderedTransactions = showMore
-    ? transactions.slice(0, 10)
+    ? transactions?.slice(0, 10)
     : transactions;
 
   const moreOrLessButton = showMore ? 'Mostrar mais' : 'Mostrar menos';
 
   const handleMoreOrLessButton = () => setShowMore(!showMore);
-
-  const handleOrderByChange = () =>
-    setOrderBy((prev) => (prev === 'desc' ? 'asc' : 'desc'));
-
-  const handleTypeChange = (value: TransactionTypes) => setType(value);
 
   return (
     <Styled.Container>

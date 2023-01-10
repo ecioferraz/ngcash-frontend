@@ -1,13 +1,13 @@
 import Loading from '../../components/Loading';
 import TextCard from '../../components/TextCard';
-import { useUpdateContext } from '../../contexts/Update.context';
-import useBalance from '../../hooks/useBalance';
+import BalanceCardProps from './BalanceCard.props';
 import * as Styled from './styles';
 
-export default function BalanceCard() {
-  const { update } = useUpdateContext();
-  const { balance, error, loading } = useBalance(update);
-
+export default function BalanceCard({
+  balance,
+  error,
+  loading,
+}: BalanceCardProps) {
   return (
     <Styled.Container>
       <TextCard as="h6" size="small">
