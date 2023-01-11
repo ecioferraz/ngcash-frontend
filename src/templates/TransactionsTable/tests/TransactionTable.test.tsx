@@ -1,115 +1,137 @@
 import renderTheme from '../../../styles/renderTheme';
 import TransactionTable from '..';
+import { transactionsMock } from './mock';
 import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import AccountProvider from '../../../providers/AccountProvider';
 
 describe('<TransactionTable />', () => {
-  it('should render <TransactionTable />', () => {
-    const { container } = renderTheme(<TransactionTable />);
+  describe('with transactions history', () => {
+    let container: HTMLElement;
 
-    expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        font-size: 3.2rem;
-        text-transform: uppercase;
-      }
+    beforeEach(() => {
+      container = renderTheme(
+        <AccountProvider>
+          <TransactionTable transactions={transactionsMock} />,
+        </AccountProvider>,
+      ).container;
+    });
 
-      .c2 {
-        font-size: 1.6rem;
-        text-transform: none;
-      }
+    it('should render <TransactionTable /> with transactions history', () => {
+      expect(container).toMatchSnapshot();
+    });
 
-      .c0 {
-        text-align: center;
-        width: 100%;
-      }
+    it('should select a different type of transaction', async () => {
+      const select = screen.getByRole('combobox');
+      const all = screen.getByRole('option', { name: 'Todas' });
+      const cashIn = screen.getByRole('option', { name: 'Entradas' });
 
-      .c0 > h1 {
-        margin-bottom: 0;
-      }
+      expect((all as HTMLOptionElement).selected).toBe(true);
 
-      @media (max-width:768px) {
-        .c0 {
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
-        }
-      }
+      await userEvent.selectOptions(select, cashIn);
 
-      <div>
-        <section
-          class="c0"
-        >
-          <h1
-            class="c1"
-          >
-            Histórico de transações
-          </h1>
-          <p
-            class="c2"
-          >
-            Você ainda não realizou transações.
-          </p>
-        </section>
-      </div>
-    `);
+      expect((cashIn as HTMLOptionElement).selected).toBe(true);
+    });
+
+    it('should render a different svg button when the order of transactions gets changed', async () => {
+      const dropDown = container.querySelector('svg[name="drop-down"]');
+
+      expect(dropDown).toBeInTheDocument();
+
+      await userEvent.click(dropDown?.parentElement as HTMLButtonElement);
+
+      const dropUp = container.querySelector('svg[name="drop-up"]');
+
+      expect(dropUp).toBeInTheDocument();
+    });
+
+    it("should render 'Mostrar menos' button", async () => {
+      const showMoreBtn = screen.getByRole('button', { name: 'Mostrar mais' });
+
+      expect(showMoreBtn).toBeInTheDocument();
+
+      await userEvent.click(showMoreBtn);
+
+      const showLessBtn = screen.getByRole('button', { name: 'Mostrar menos' });
+
+      expect(showLessBtn).toBeInTheDocument();
+    });
   });
 
-  it('should render <TransactionTable /> with an error message', () => {
-    const { container } = renderTheme(<TransactionTable />);
+  describe('without transactions history', () => {
+    it('should render <Loading />', () => {
+      const { container } = renderTheme(<TransactionTable loading />);
 
-    expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        font-size: 3.2rem;
-        text-transform: uppercase;
-      }
+      expect(container).toMatchSnapshot();
+    });
 
-      .c2 {
-        font-size: 1.6rem;
-        text-transform: none;
-      }
+    it('should render a message when there are no transactions to show', () => {
+      renderTheme(<TransactionTable />);
 
-      .c0 {
-        text-align: center;
-        width: 100%;
-      }
+      expect(
+        screen.getByText('Você ainda não realizou transações.'),
+      ).toBeInTheDocument();
+    });
 
-      .c0 > h1 {
-        margin-bottom: 0;
-      }
+    it('should render <TransactionTable /> with an error message', () => {
+      const { container } = renderTheme(
+        <TransactionTable error="Unauthorized" />,
+      );
 
-      @media (max-width:768px) {
-        .c0 {
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
+      expect(container).toMatchInlineSnapshot(`
+        .c1 {
+          font-size: 3.2rem;
+          text-transform: uppercase;
         }
-      }
 
-      <div>
-        <section
-          class="c0"
-        >
-          <h1
-            class="c1"
+        .c2 {
+          font-size: 1.6rem;
+          text-transform: none;
+        }
+
+        .c0 {
+          text-align: center;
+          width: 100%;
+        }
+
+        .c0 > * {
+          margin: 2rem 0;
+        }
+
+        .c0 > h1 {
+          margin-bottom: 0;
+          margin-top: 1rem;
+        }
+
+        .c0 > button {
+          margin-top: 0;
+        }
+
+        @media (max-width:768px) {
+          .c0 {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+          }
+        }
+
+        <div>
+          <section
+            class="c0"
           >
-            Histórico de transações
-          </h1>
-          <p
-            class="c2"
-          >
-            Você ainda não realizou transações.
-          </p>
-        </section>
-      </div>
-    `);
-  });
-
-  it('should select a different type', () => {
-    renderTheme(<TransactionTable />);
-
-    const options = screen.getAllByRole('option');
-    console.log(options);
-    const select = options[0].parentElement;
-
-    expect(options[0].tagName).toBe('Todas');
+            <h1
+              class="c1"
+            >
+              Histórico de transações
+            </h1>
+            <p
+              class="c2"
+            >
+              Unauthorized
+            </p>
+          </section>
+        </div>
+      `);
+    });
   });
 });

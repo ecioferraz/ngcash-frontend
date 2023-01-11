@@ -57,7 +57,11 @@ export default function TransactionsTable({
                 Ordenar por data:
               </TextCard>
               <Button handleClick={handleOrderByChange}>
-                {orderBy === 'desc' ? <ArrowDropDown /> : <ArrowDropUp />}
+                {orderBy === 'desc' ? (
+                  <ArrowDropDown name="drop-down" />
+                ) : (
+                  <ArrowDropUp name="drop-up" />
+                )}
               </Button>
             </Styled.Order>
           </Styled.Filters>
