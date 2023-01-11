@@ -34,13 +34,13 @@ describe('<TransactionTable />', () => {
     });
 
     it('should render a different svg button when the order of transactions gets changed', async () => {
-      const dropDown = container.querySelector('svg[name="drop-down"]');
+      const dropDown = container.querySelector('svg[name="desc"]');
 
       expect(dropDown).toBeInTheDocument();
 
       await userEvent.click(dropDown?.parentElement as HTMLButtonElement);
 
-      const dropUp = container.querySelector('svg[name="drop-up"]');
+      const dropUp = container.querySelector('svg[name="asc"]');
 
       expect(dropUp).toBeInTheDocument();
     });

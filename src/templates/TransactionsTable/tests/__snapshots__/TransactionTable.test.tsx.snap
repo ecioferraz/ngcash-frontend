@@ -225,7 +225,7 @@ exports[`<TransactionTable /> with transactions history should render <Transacti
             class="c7"
             fill="currentColor"
             focusable="false"
-            name="drop-down"
+            name="desc"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -648,7 +648,7 @@ exports[`<TransactionTable /> without transactions history should render <Loadin
             class="c7"
             fill="currentColor"
             focusable="false"
-            name="drop-down"
+            name="desc"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
