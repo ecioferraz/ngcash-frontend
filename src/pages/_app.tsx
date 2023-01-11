@@ -3,15 +3,15 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/GlobalStyles';
 import { theme } from '../styles/theme';
 import '../../public/fonts/styles.css';
-import UpdateProvider from '../providers/UpdateProvider';
+import AccountProvider from '../providers/AccountProvider';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <UpdateProvider>
+    <AccountProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Component {...pageProps} />
       </ThemeProvider>
-    </UpdateProvider>
+    </AccountProvider>
   );
 }

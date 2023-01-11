@@ -3,7 +3,7 @@ import { AccountContext } from '../contexts/Account.context';
 import OrderBy from '../types/OrderBy';
 import TransactionTypes from '../types/TransactionTypes';
 
-export default function UpdateProvider({ children }: PropsWithChildren) {
+export default function AccountProvider({ children }: PropsWithChildren) {
   const [orderBy, setOrderBy] = useState<OrderBy>('desc');
   const [type, setType] = useState<TransactionTypes>('all');
   const [update, setUpdate] = useState(false);
