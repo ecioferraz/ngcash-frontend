@@ -33,9 +33,9 @@ export default function TransactionForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { token } = readUser();
 
     try {
+      const { token } = readUser();
       setTransactionData((prev) => ({ ...prev, loading: true }));
       setResponseMessage('');
 
