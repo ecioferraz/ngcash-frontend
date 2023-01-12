@@ -34,7 +34,7 @@ describe('<TransactionTable />', () => {
     });
 
     it('should render a different svg button when the order of transactions gets changed', async () => {
-      const dropDown = container.querySelector('svg[name="desc"]');
+      let dropDown = container.querySelector('svg[name="desc"]');
 
       expect(dropDown).toBeInTheDocument();
 
@@ -43,6 +43,12 @@ describe('<TransactionTable />', () => {
       const dropUp = container.querySelector('svg[name="asc"]');
 
       expect(dropUp).toBeInTheDocument();
+
+      await userEvent.click(dropUp?.parentElement as HTMLButtonElement);
+
+      dropDown = container.querySelector('svg[name="desc"]');
+
+      expect(dropDown).toBeInTheDocument();
     });
 
     it("should render 'Mostrar menos' button", async () => {
