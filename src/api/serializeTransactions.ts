@@ -1,17 +1,6 @@
 import SerializedTransactions from '../types/SerializedTransactions';
+import Transactions from '../types/Transactions';
 import formatToReal from '../utils/formatToReal';
-
-type Account = { user: { username: string } };
-
-type Transactions = {
-  createdAt: string;
-  creditedAccount: Account;
-  creditedAccountId: string;
-  debitedAccount: Account;
-  debitedAccountId: string;
-  id: string;
-  value: string;
-};
 
 const serializeTransactions = (
   data: Transactions[],

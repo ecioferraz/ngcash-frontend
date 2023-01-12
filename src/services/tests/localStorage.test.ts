@@ -1,5 +1,5 @@
 import { readUser, removeUser, saveUser, USER_KEY } from '../localStorage';
-import userMock from './mock';
+import userMock from './mocks';
 
 describe('localStorage', () => {
   it('should save a new user', () => {

@@ -1,6 +1,6 @@
 import renderTheme from '../../../styles/renderTheme';
 import TransactionTable from '..';
-import { transactionsMock } from './mock';
+import { transactionsMock } from './mocks';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import AccountProvider from '../../../providers/AccountProvider';

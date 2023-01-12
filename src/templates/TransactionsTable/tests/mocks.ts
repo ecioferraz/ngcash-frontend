@@ -1,6 +1,7 @@
+import SerializedTransactions from '../../../types/SerializedTransactions';
 import TransactionTypes from '../../../types/TransactionTypes';
 
-export const transactionsMock = [
+export const transactionsMock: SerializedTransactions[] = [
   {
     date: '01/01/2023 15:57:21',
     id: 'id1',

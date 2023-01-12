@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import TransactionsTable from '.';
-import { transactionsMock } from './tests/mock';
+import { transactionsMock } from './tests/mocks';
 import TransactionTableProps from './TransactionsTable.props';
 
 export default {

@@ -1,4 +1,7 @@
-export const dataMock = [
+import SerializedTransactions from '../../types/SerializedTransactions';
+import Transactions from '../../types/Transactions';
+
+export const dataMock: Transactions[] = [
   {
     id: 'id',
     creditedAccountId: 'accountId1',
@@ -35,7 +38,7 @@ export const dataMock = [
   },
 ];
 
-export const serializedMock = [
+export const serializedMock: SerializedTransactions[] = [
   {
     date: '10/01/2023 15:13:23',
     id: 'id',
