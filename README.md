@@ -1,34 +1,1518 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# NG.CASH Front-end
 
-First, run the development server:
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Entre no diretório do projeto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd ngcash-frontend
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Instale as dependências
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-## Learn More
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Aprendizados
 
-## Deploy on Vercel
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [@ecioferraz](https://www.github.com/ecioferraz)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+
+
+# NG.CASH Front-end
+
+Este foi um projeto desenvolvido para o processo seletivo da empresa NG.CASH e trata-se de uma aplicação onde é possível realizar transferências entre usuários.
+
+## Stack e ferramentas utilizadas
+
+**Front-end:**
+- Typescript
+- React
+- Next.js
+- Styled-components
+- Storybook
+- Styled-icons
+- Axios
+- Jest
+- Eslint
+- Prettier
+
+
+## Funcionalidades
+
+- Registrar e logar usuário
+- Realizar transferência de valores entre contas
+- Visualizar saldo e histórico de transferências
+## Rodando localmente
+
+*Para executar o Front-end corretamente é necessário iniciar o [Back-end](https://github.com/ecioferraz/ngcash-backend) primeiro.*
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:ecioferraz/ngcash-frontend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd ngcash-frontend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Execute o projeto
+```bash
+  npm run dev
+```
+## Rodando os testes
+
+Para rodar os testes e verificar sua cobertura, rode o seguinte comando
+
+```bash
+  npm test
+```
+
+## Aprendizados
+
+Este foi o primeiro projeto que desenvolvi utilizando Next.js, Styled-components, Storybook e criando meus próprios hooks para ajudar no desenvolvimento.
+## Autores
+
+- [@ecioferraz](https://www.github.com/ecioferraz)
+

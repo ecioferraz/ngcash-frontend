@@ -1,20 +1,16 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../src/styles/GlobalStyles';
 import { theme } from '../src/styles/theme';
-import '../public/assets/fonts/styles.css';
+import '../public/fonts/styles.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
-    default: 'light',
+    default: 'dark',
     values: [
       {
-        name: 'light',
-        value: theme.colors.white,
-      },
-      {
         name: 'dark',
-        value: theme.colors.primaryColor,
+        value: theme.colors.black,
       },
     ],
   },

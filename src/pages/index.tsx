@@ -1,9 +1,11 @@
-import styled from 'styled-components';
+import Router from 'next/router';
+import { useEffect } from 'react';
+import { readUser } from '../services/localStorage';
 
 export default function Home() {
-  const Heading = styled.h1`
-    background: ${({ theme }) => theme.colors.secondaryColor};
-  `;
+  useEffect(() => {
+    readUser() ? Router.push('/account') : Router.push('/login');
+  }, []);
 
-  return <Heading>Hello, world</Heading>;
+  return <></>;
 }

@@ -2,16 +2,17 @@ export const theme = {
   colors: {
     primaryColor: '#0A1128',
     secondaryColor: '#dc143c',
+    black: '#000000',
+    lightGreen: '#00D775',
     white: '#FFFFFF',
     mediumGray: '#DDDDDD',
   },
   font: {
     family: {
-      default: "'Open Sans', sans-serif",
-      secondary: "'Montserrat', sans-serif",
+      default: '"IBM Plex Sans", sans-serif',
     },
     sizes: {
-      xsmall: '8rem',
+      xsmall: '0.9rem',
       small: '1.6rem',
       medium: '2.4rem',
       large: '3.2rem',
@@ -25,7 +26,7 @@ export const theme = {
     lteMedium: '(max-width: 768px)',
   },
   spacings: {
-    xsmall: '8rem',
+    xsmall: '0.8rem',
     small: '1.6rem',
     medium: '2.4rem',
     large: '3.2rem',
